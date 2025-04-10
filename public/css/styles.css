@@ -50,6 +50,9 @@ body{
 
 nav{
   background-color: var(--dark-color);
+}
+
+nav a{
   color: var(--light-color);
 }
 
@@ -170,6 +173,77 @@ nav ul{
   margin-bottom: 10px;
   font-size: small;
 }
+
+/* vehicle classification type pages */
+#inv-display {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: flex-start;
+  padding: 0;
+  list-style: none;
+}
+
+#inv-display li {
+  background-color: rgb(219, 212, 212);
+  width: 220px;
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+#inv-display li img {
+  display: block;
+  max-height: 200px;
+  width: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.namePrice {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.namePrice a {
+  text-decoration: none;
+  color: var(--color1);
+  font-weight: bold;
+}
+
+.namePrice a:hover {
+  color: var(--link-hover);
+}
+
+.namePrice span {
+  display: block;
+  margin-top: 5px;
+  font-size: 1rem;
+  color: #000;
+}
+
+/* Message for no results */
+.notice {
+  text-align: center;
+  color: red;
+  font-size: 1.2rem;
+  margin-top: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @media screen and (min-width: 768px){
