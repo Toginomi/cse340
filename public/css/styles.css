@@ -207,12 +207,8 @@ nav ul{
 
 .namePrice a {
   text-decoration: none;
-  color: var(--color1);
+  color: var(--dark-color);
   font-weight: bold;
-}
-
-.namePrice a:hover {
-  color: var(--link-hover);
 }
 
 .namePrice span {
