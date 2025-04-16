@@ -1,35 +1,33 @@
 <div class="vehicle-detail">
-    <!-- Display the vehicle title (make and model) -->
-    <h1><%= title %></h1>
+    <div class="vehicle-header">
+      <h1><%= vehicle.inv_make %> <%= vehicle.inv_model %></h1>
+    </div>
 
-    <!-- Display vehicle image if available -->
-    <% if (vehicleGrid.image_url) { %>
-        <img src="<%= vehicleGrid.image_url %>" alt="<%= title %> image" class="vehicle-image">
-    <% } else { %>
-        <p>No image available</p>
-    <% } %>
-    
-    <div class="vehicle-info">
-      <ul>
-          <li><strong>Make:</strong> <%= vehicleGrid.inv_make %></li>
-          <li><strong>Model:</strong> <%= vehicleGrid.inv_model %></li>
-          <li><strong>Year:</strong> <%= vehicleGrid.inv_year %></li>
-          <li><strong>Color:</strong> <%= vehicleGrid.inv_color %></li>
-          <li><strong>Price:</strong> $<%= vehicleGrid.inv_price %></li>
-          <li><strong>Mileage:</strong> <%= vehicleGrid.inv_mileage %> miles</li>
-          <li><strong>Transmission:</strong> <%= vehicleGrid.inv_transmission %></li>
-          <li><strong>Engine Size:</strong> <%= vehicleGrid.inv_engine_size %></li>
-          <li><strong>Fuel Type:</strong> <%= vehicleGrid.inv_fuel_type %></li>
-          <li><strong>VIN Number:</strong> <%= vehicleGrid.inv_vin_number %></li>
-      </ul>
+    <div class="vehicle-content">
+      <div class="vehicle-media">
+        <% if (vehicle.inv_image) { %>
+          <img src="<%= vehicle.inv_image %>" alt="Image of <%= vehicle.inv_make %> <%= vehicle.inv_model %>" class="vehicle-image">
+        <% } else { %>
+          <p>No image available</p>
+        <% } %>
+      </div>
+
+      <div class="vehicle-info">
+        <ul>
+          <li><strong>Make:</strong> <%= vehicle.inv_make %></li>
+          <li><strong>Model:</strong> <%= vehicle.inv_model %></li>
+          <li><strong>Year:</strong> <%= vehicle.inv_year %></li>
+          <li><strong>Color:</strong> <%= vehicle.inv_color %></li>
+          <li><strong>Price:</strong> $<%= new Intl.NumberFormat().format(vehicle.inv_price) %></li>
+          <li><strong>Mileage:</strong> <%= vehicle.inv_miles.toLocaleString() %> miles</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="vehicle-description">
+      <h2>Description:</h2>
+      <p><%= vehicle.inv_description %></p>
+    </div>
+
+    <a href="/inv/type/<%= vehicle.classification_id %>" class="back-to-list">Back to Classification</a>
   </div>
-
-    <% if (vehicleGrid.inv_description) { %>
-        <div class="vehicle-description">
-            <h2>Description:</h2>
-            <p><%= vehicleGrid.inv_description %></p>
-        </div>
-    <% } %>
-
-    <a href="/type/<%= vehicleGrid.classification_id %>" class="back-to-list">Back to Classification</a>
-</div>

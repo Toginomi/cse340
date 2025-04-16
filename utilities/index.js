@@ -90,15 +90,15 @@ Util.buildDetailView = async function(data){
     invBox += '<li>' + data.inv_description + '</li>';
     invBox += '<li>Mileage: ' + mileage + ' miles</li>';
     invBox += '<li>Exterior Color: ' + data.inv_color + '</li>';
-    invBox += '<li>Fuel Type: ' + data.inv_fuel + '</li>';
-    invBox += '<li>Location: ' + data.inv_location + '</li>';
-    invBox += '<li>VIN: ' + data.inv_vin + '</li>';
-    invBox += '<li>Stock #: ' + data.inv_stock + '</li>';
+    // Optional extras (only if you later add these fields to your table)
+    // invBox += '<li>Fuel Type: ' + data.inv_fuel + '</li>';
+    // invBox += '<li>Location: ' + data.inv_location + '</li>';
+    // invBox += '<li>VIN: ' + data.inv_vin + '</li>';
+    // invBox += '<li>Stock #: ' + data.inv_stock + '</li>';
     invBox += '</ul>';
     invBox += '</div>'; // closes vehicle-details
 
     invBox += '</div>'; // closes info-box
-
     invBox += '</div>'; // closes inv-box
 
   } else {
