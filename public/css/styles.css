@@ -52,8 +52,8 @@ nav{
   background-color: var(--dark-color);
 }
 
-nav a{
-  color: var(--light-color);
+nav li{
+  color: #ffffff;
 }
 
 nav ul{
@@ -320,21 +320,6 @@ nav ul{
 .back-to-list:hover {
   background-color: var(--accent-color);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (min-width: 768px){
   body {
