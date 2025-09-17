@@ -52,8 +52,9 @@ nav{
   background-color: var(--dark-color);
 }
 
-nav li{
+nav li a{
   color: #ffffff;
+  text-decoration: none;
 }
 
 nav ul{
