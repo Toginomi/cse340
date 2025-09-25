@@ -26,17 +26,18 @@ async function getInventoryByClassificationId(classification_id) {
 }
 
 /* ***************************
- *  Get vehicle details by inventory_id
+ *  Get vehicle details by inv_id
  * ************************** */
-async function getDetailsByInventoryId(inventory_id) {
+async function getDetailsByInventoryId(inv_id) {
   try {
     const data = await pool.query(
       `SELECT * FROM public.inventory
       WHERE inv_id = $1`,
-      [inventory_id]
+      [inv_id]
     )
+    return data.rows[0]
   } catch (error) {
-    console.log("getdetailsbyid" + error)
+    console.log("getdetailsbyid error" + error)
   }
 }
 
