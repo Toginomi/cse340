@@ -377,6 +377,11 @@ footer{
   font-size: small;
 }
 
+footer a{
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 /* For screens smaller than 768px: stack content in a single column */
 @media screen and (max-width: 767px) {
   .vehicle-content {
