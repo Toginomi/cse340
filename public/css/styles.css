@@ -13,7 +13,7 @@
   --dark-color: #242332;
   --light-color: #ffffff;
   --button-color: #4c96d7;
-  --accent-color: #29bddc;
+  --accent-color: #334fdb;
 }
 
 body{
@@ -85,7 +85,7 @@ nav ul{
   left: 5%;
   top: 25%;
   background-color: rgba(240, 233, 233, 0.5);
-  color: var(--accent-color);
+  color: var(--button-color);
 }
 
 .hero-image{
@@ -310,7 +310,7 @@ nav ul{
   display: inline-block;
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: var(--button-color);
+  background-color: var(--accent-color);
   color: var(--light-color);
   text-decoration: none;
   border-radius: 5px;
@@ -319,7 +319,7 @@ nav ul{
 }
 
 .back-to-list:hover {
-  background-color: var(--accent-color);
+  text-decoration: underline;
 }
 
 @media screen and (min-width: 768px){
